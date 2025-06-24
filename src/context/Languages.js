@@ -4,7 +4,7 @@ import { useLocalStorage } from "../hooks/useProductSearch";
 export const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useLocalStorage("language","en"); 
+  const [language, setLanguage] = useLocalStorage("language", "en");
 
 
   const changeLanguage = (newLanguage) => {

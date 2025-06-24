@@ -1,26 +1,32 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from '../App';
-import {useDebounce} from '../hooks/useProductSearch'
+import { LanguageContext } from '../context/Languages';
+import { useDebounce } from '../hooks/useProductSearch'
+
 
 const ProductSearch = ({ searchTerm, setSearchTerm }) => {
-  //const [searchTerm, setSearchTerm] = useState('');
   const { isDarkTheme } = useContext(ThemeContext);
 
+  const { language } = useContext(LanguageContext);
+  const placeholderText = {
+    fr: "Rechercher un produit...",
+    en: "Search for a product...",
+    de: "Suchen Sie nach einem Produkt",
+  };
   const [inpVal, setInpVal] = useState(searchTerm);
-  const debouncedValue = useDebounce(inpVal, 100);
+  const debouncedValue = useDebounce(inpVal, 120);
 
   useEffect(() => {
     setSearchTerm(debouncedValue);
   }, [debouncedValue, setSearchTerm]);
 
-  
   return (
     <div className="mb-4">
       <input
         type="text"
         value={inpVal}
         onChange={(e) => setInpVal(e.target.value)}
-        placeholder="Rechercher un produit..."
+        placeholder={placeholderText[language]}
         className={`form-control ${isDarkTheme ? 'bg-dark text-light' : ''}`}
       />
     </div>
