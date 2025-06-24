@@ -9,7 +9,7 @@ const ProductList = ({ searchTerm }) => {
   const labelText = {
     fr: "Prix: ",
     en: "Price: ",
-    de: "Preis: ",
+    se: "Precio: ",
   };
   const { language } = useContext(LanguageContext);
   const {

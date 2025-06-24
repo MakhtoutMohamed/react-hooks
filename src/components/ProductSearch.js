@@ -11,10 +11,10 @@ const ProductSearch = ({ searchTerm, setSearchTerm }) => {
   const placeholderText = {
     fr: "Rechercher un produit...",
     en: "Search for a product...",
-    de: "Suchen Sie nach einem Produkt",
+    se: "Buscar un producto...",
   };
   const [inpVal, setInpVal] = useState(searchTerm);
-  const debouncedValue = useDebounce(inpVal, 120);
+  const debouncedValue = useDebounce(inpVal, 300);
 
   useEffect(() => {
     setSearchTerm(debouncedValue);

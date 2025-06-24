@@ -35,16 +35,31 @@ npm start
 ## Presentation de projet :
 ### Exercice 1 : État et Effets 
 #### Implémentation d'une recherche en temps réel
-
+Recherche en temp reel:
+![](imgs/1.png)
 
 ### Exercice 2 : Context et Internationalisation
 #### Gérer les préférences de langue
-
+French:
+![](imgs/2fr.png)
+English:
+![](imgs/3en.png)
+Spanish:
+![](imgs/4se.png)
 
 ### Exercice 3 : Hooks Personnalisés
 #### Objectif : Créer des hooks réutilisables
-
+Recherche utilisant le debounce:
+![](imgs/5.png)
+Debounce apres 3000ms:
+![](imgs/6.png)
 
 ### Exercice 4 : Gestion Asynchrone et Pagination
 #### Objectif : Gérer le chargement et la pagination
-
+Bouton Recharger:
+![](imgs/7.png)
+Chargement des produits:
+![](imgs/8.png)
+Pagination:
+![](imgs/9.png)
+![](imgs/10.png)
